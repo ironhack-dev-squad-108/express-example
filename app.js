@@ -11,13 +11,12 @@ app.use(express.static('public'));
 
 // Our first Route: GET http://localhost:3000/
 app.get('/', (request, response) => {
-  console.log(__dirname + '/views/home-page.html');
   // response.send is the HTML that is sent
   response.sendFile(__dirname + '/views/home-page.html');
 });
 
-app.get('/pizza', (request, response, next) => {
-  response.send('<h1>🍕</h1>');
+app.get('/project1', (request, response, next) => {
+  response.sendFile(__dirname + '/views/project1-page.html');
 });
 
 // Starts the server
